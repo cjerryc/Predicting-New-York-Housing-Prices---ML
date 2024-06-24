@@ -44,7 +44,6 @@ Additionally, we looked at the kernel density estimation and cumulative distribu
 From this, we filtered out houses with prices below $100k or above $900k, as well as houses with more than 7 bathrooms or 8 bedrooms as those were considered outliers. 
 
 ![Figure 1: Distributions of Original Dataset vs. Clipped Dataset](Figure1.png)
-Figure 1: Distributions of Original Dataset vs. Clipped Dataset
 
 We then one-hot encoded the categorical features like property type (‘TYPE’) and sublocality (‘SUBLOCALITY’). 
 We also scaled the numerical features like square feet (‘PROPERTYSQFT’), number of bedrooms (‘BEDS’) and bathrooms (‘BATH’) using StandardScaler.
@@ -112,8 +111,7 @@ For just the numerical features, the R-squared dropped to 0.289, indicating wors
 
 
 
-
-Figure 2: Comparison of Actual vs. Predicted Prices for Numerical Only & Numerical w/ Categorical Data
+![Figure 2: Comparison of Actual vs. Predicted Prices for Numerical Only & Numerical w/ Categorical Data](Figure2.png)
 
 
 A few key interpretations and potential reasons for the modest performance:
@@ -130,7 +128,7 @@ Overall, while including categorical variables provided some improvement, linear
 In evaluating the effectiveness of the K-Means algorithm, we found the MAE (Mean Average Error) of each iteration of predictions, then across the training set as a whole while performing K-Fold Cross Validation. 
 In doing so, we find a more stable error in housing price predictions vs. a simple Test Set split (See Figure 3 Below).
 
-Figure 3: Performance of Test Set vs. K-Fold Cross Validation on the K-Means approach.
+![Figure 3: Performance of Test Set vs. K-Fold Cross Validation on the K-Means approach](Figure3.png)
 	
 While K-Means’ performance stabilized, it still has a large margin of error that does not address the challenge of housing price prediction effectively. 
 The MAE hovers around ~130,000 USD with outlier filtering and ~2 million USD without, a value much too large for the average homeowner to consider. 
@@ -146,11 +144,11 @@ K-Means also only clusters close points together, smoothing out outlying feature
 The best mean absolute error we acquired for K-Nearest Neighbors was 95,257.49 with 10-fold cross-validation and a k value of 11, which was the best of any of the algorithms that we implemented but still not ideal. 
 In order to show our best case results, we used a train test split of .8/.2 to demonstrate our best case 11-Nearest Neighbors model. The distribution of actual vs predicted prices (see Figure 4 below) was relatively similar, however due to the nature of K-Nearest Neighbors it skews towards the middle of the distribution for predictions no matter what price threshold we chose when cleaning data.	
 
-Figure 4: Distribution of Actual vs. Predicted Prices for 11-Nearest Neighbors
+![Figure 4: Distribution of Actual vs. Predicted Prices for 11-Nearest Neighbors](Figure4.png)
 
 Using a scatter plot to compare actual vs predicted price (see Figure 5 below), we can see a moderate linear relationship between them with an R^2 value of 0.58 indicating that our model captures 58% of the variance in price.
 
-Figure 5: Actual vs. Predicted Prices for 11-Nearest Neighbors
+![Figure 5: Actual vs. Predicted Prices for 11-Nearest Neighbors](Figure5.png)
 
 ### Decision Trees
 The performance of decision trees were suboptimal, the accuracy of the model was a mere 3.2%. With each iteration of expanding and closing off different features from the model such as latitude, longitude, type, address, etc. 
