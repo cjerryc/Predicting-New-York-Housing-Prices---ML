@@ -43,7 +43,7 @@ Additionally, we looked at the kernel density estimation and cumulative distribu
 
 From this, we filtered out houses with prices below $100k or above $900k, as well as houses with more than 7 bathrooms or 8 bedrooms as those were considered outliers. 
 
-![Figure 1: Distributions of Original Dataset vs. Clipped Dataset](Figure 1.png)
+![Figure 1: Distributions of Original Dataset vs. Clipped Dataset](Figure1.png)
 Figure 1: Distributions of Original Dataset vs. Clipped Dataset
 
 We then one-hot encoded the categorical features like property type (‘TYPE’) and sublocality (‘SUBLOCALITY’). 
