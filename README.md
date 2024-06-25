@@ -1,7 +1,7 @@
 #### Authors: Jerry Chang, Khoa Ly, Liam Hyde, Luke Rowe
 #### Under Guidance of: Dr. Rwebangira
 #### Cal Poly SLO, CSC 466: Knowledge Discovery from Data
-
+##### Highlights: Python, Pandas, Jupyter, Matplot
 # Predicting New York City Housing Prices
 
 ## Abstract
